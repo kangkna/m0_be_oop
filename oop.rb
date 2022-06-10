@@ -3,13 +3,13 @@
 # it should have a color attribute, that is silver by default
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 class Unicorn
-  def initialize(size)
-    @size = size
+  def initialize(name)
+    @name = name
     @color = "silver"
   end
 
   def say
-    puts "*~*"
+    puts "*~*" + @name +"*~*"
   end
 end
 
@@ -56,7 +56,7 @@ class Dragon
     else
       @hunger = @hunger-1
     end
-    
+
   end
 end
 
@@ -89,7 +89,8 @@ class Hobbit
     @is_old = "true"
   end
 
-  if @name = "Frodo"
+  if @name == "Frodo"
     @has_ring = "true"
   end
+end
 end
