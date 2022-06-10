@@ -46,13 +46,17 @@ class Dragon
     @name = name
     @rider = rider
     @color = color
-    @is_hungry = "true"
+    @is_hungry = true
+    @hunger = 4
   end
 
   def eat
-    if @is_hungry = 4
-
+    if @hunger == 0
+      @is_hungry = false
+    else
+      @hunger = @hunger-1
     end
+    
   end
 end
 
@@ -84,7 +88,7 @@ class Hobbit
   if @age >= 101
     @is_old = "true"
   end
-  
+
   if @name = "Frodo"
     @has_ring = "true"
   end
